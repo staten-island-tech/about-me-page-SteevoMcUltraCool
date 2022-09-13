@@ -21,8 +21,28 @@
             background-color: rgb(170, 125, 25)
         }
 
-        p {
+        p{            
+          font-size: 20px;
+          min-width:40%; width:650px; max-width:100%}
+        ul,ol {
             font-size: 20px;
+          min-width:20%; width:300px; max-width:90%
+        }
+        a:link {
+          color: white;  
+        }
+        a:visited {
+          color: white;  
+        }
+        a:hover {
+          color: rgb(255,255,117)
+        }
+        .bar {
+          background-color: black;
+          height: 90%;
+          width: 160px;
+          position: fixed;
+          border-radius: 10px;
         }
     </style>
 </head>
@@ -31,14 +51,47 @@
     <header>
         <center>
             <h1> Steevo McCool </h1>
-            <h2> The Man The Myth The Legend</h2>
+            <h2> The Man &nbspThe Myth &nbspThe Legend</h2>
         </center>
     </header>
-    <div style="margin-bottom:calc(3.5% + 50px)"></div>
+    <div style="margin-bottom:calc(3% + 20px)"></div>
     <center>
-        <p style="width:40%">My name is Stephen Radice, but you probably know me as Steevo McCool. I enjoy playing
-            sports and coding in my free time. I am on the football team number 22. Go Seaguulls or smth idk.</p>
+        <p>My name is Stephen Radice, but you probably know me as Steevo McCool. I enjoy playing sports and coding in my free time. I am on the football team number 22. Go Seaguulls or smth idk. <a target = "_blank" href="https://www.hudl.com/video/3/18340616/631fd6f819b00e09f04ec13d"> Click here </a> to see me catch a pass. Or dont. Idc. But here is an unordered list of things I <i> do</i> care about:</p>
+      <ul>
+        <li>nice, centered text</li>
+        <li>football and video games</li>
+        <li>my friends and family</li>
+        <li> cheese ig</li>
+      </ul>
+      <p> Yeah. I know, I am so caring. Especially about centered text. But anyways, here are some of my favorite movies in an ordered list:</p>
+      <ol>
+        <li>Bullet Train</li>
+        <li>Cloudy With a Chance Of Meatballs</li>
+        <li>Forrest Gump</li>
+      </ol>
+      <p>Yes I Know, This is a lot to take in about me. If you didnt know a lot about me before, then shame. Anyways, here is a cool meme.</p>
+      <div style="margin-bottom:calc(2.5% + 5px)"></div>
+      <img src ="https://www.letseatcake.com/wp-content/uploads/2021/07/Funny-Memes-44.jpg" style=" min-width:30%; width:500px; max-width:90%"> </img>
     </center>
+  <div class ="bar" style="left:calc(75px + 1.5%); top:5%"></div>
+  <div class ="bar" style="right:calc(75px + 1.5%); top:5%"></div>
+  <script>
+  function resizeBars() {     
+    var bars = document.getElementsByClassName("bar")
+    if (window.innerWidth < 900) {
+      bars[0].style.width = "0px"
+      bars[1].style.width = "0px"
+    }else if (window.innerWidth < 1155) {
+      bars[0].style.width = `${(window.innerWidth-900)/255 *160}px`
+      bars[1].style.width = `${(window.innerWidth-900)/255 *160}px`
+    }else {
+      bars[0].style.width = "160px"
+      bars[1].style.width = "160px"
+    }
+  }
+  resizeBars()
+  window.onresize = resizeBars
+  </script>
 </body>
 
 </html>
